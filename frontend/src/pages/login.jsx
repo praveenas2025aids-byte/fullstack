@@ -19,7 +19,7 @@ function Login() {
 }
 
   
-  const formsubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formdata);
     alert("login sucessful")
@@ -37,7 +37,7 @@ function Login() {
     <button type="submit" onClick={console.log(email,password)}>Submit</button>
     <button type="submit" onClick={() =>print()}>Submit</button>
     */}
-   <form onSubmit={formsubmit}> 
+   <form onSubmit={handleSubmit}> 
     <input type="text" name="username" required placeholder="Enter your username"  onChange={handlechange} />
     <input type="password" name="password" required placeholder="Enter your password"  onChange={handlechange} />
     <button type="submit">Submit</button>
