@@ -12,7 +12,9 @@ function Register(){
     function onSubmit1(data){
         console.log(data)
         alert("register sucess")
-        navigate("/")
+        navigate("/",{
+            state:data
+        })
     }
     return(
     <form onSubmit={handleSubmit(onSubmit1)}> 
