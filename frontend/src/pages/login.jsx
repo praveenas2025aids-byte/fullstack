@@ -37,21 +37,23 @@ function Login() {
     
 
   }
-  return(
-    <>
-    <div className="text-cyan-500">HI</div>
-    {/*
-    <input type="email" id="email" required placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} />
-    <input type="password" id="password" required placeholder="Enter your password" value={password} onChange={(e) => setPassword(e.target.value)} />
-    <button type="submit" onClick={console.log(email,password)}>Submit</button>
-    <button type="submit" onClick={() =>print()}>Submit</button>
-    */}
-   <form onSubmit={handleSubmit}> 
-    <input type="text" name="username" required placeholder="Enter your username"  onChange={handlechange} />
-    <input type="password" name="password" required placeholder="Enter your password"  onChange={handlechange} />
-    <button type="submit">Submit</button>
-   </form>
-    </>
-  );
+ return (
+    <div className="min-h-screen flex justify-center items-center bg-gray-100 px-4">
+
+        <form onSubmit={handleSubmit} className="bg-white p-6 rounded-xl shadow-lg w-full max-w-xs border border-black">
+        <h2 className="text-2xl font-bold text-center mb-6">Login</h2>
+            <label htmlFor="username" className="block mb-2 font-semibold">Username</label>
+            <input type="text" id="username" name="username" required placeholder="Enter your username" onChange={handlechange} className="w-full border border-gray-300 rounded-lg px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+            <label htmlFor="password" className="block mb-2 font-semibold">Password</label>
+            <input type="password" id="password" name="password" required placeholder="Enter your password" onChange={handlechange} className="w-full border border-gray-300 rounded-lg px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+            <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition">Submit</button>
+        
+
+        </form>
+
+    </div>
+);
 }
 export default Login;
