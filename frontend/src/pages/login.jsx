@@ -27,7 +27,7 @@ function Login() {
     if(logindata.username===registerdata.name && logindata.password===registerdata.password){
       console.log("registerdata",registerdata)
       console.log("logindata",logindata)
-      console.log("login success")
+      console.log("login successful")
       navigate("/dashboard",{
         state:logindata
       })
